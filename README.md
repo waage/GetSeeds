@@ -11,7 +11,7 @@ Ulilizar o [SeedPicker](https://seedpicker.net/calculator/last-word.html) para c
 
 ## Instalação
 
-O projeto requer Java e Maven para instalação.
+O projeto requer Java 11 (ou acima) e Maven para instalação.
 
 
 ```sh
