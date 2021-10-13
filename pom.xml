@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>seedrandomizer</groupId>
 	<artifactId>getseeds</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<properties>
 		<maven.compiler.release>11</maven.compiler.release>
