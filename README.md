@@ -9,10 +9,17 @@ A ferramenta deve ser utilizada off-line para maior segurança.
 
 Ulilizar o [SeedPicker](https://seedpicker.net/calculator/last-word.html) para complementar a 24ª palavra
 
+## Executando
+
+O Java 11 (ou acima) deve estar instalado na máquina
+
+```sh
+java -jar getseeds.jar
+```
+
 ## Instalação
 
 O projeto requer Java 11 (ou acima) e Maven para instalação.
-
 
 ```sh
 cd getseeds
