@@ -9,6 +9,13 @@
 	<properties>
 		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>io.github.novacrypto</groupId>
+			<artifactId>BIP39</artifactId>
+			<version>0.1.9</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<finalName>getseeds</finalName>
 		<plugins>
@@ -20,7 +27,7 @@
 					<release>11</release>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
