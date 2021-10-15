@@ -1,4 +1,4 @@
-package getseeds;
+package com.github.waage.getseeds;
 
 import java.awt.MouseInfo;
 import java.awt.Point;
@@ -12,7 +12,6 @@ import io.github.novacrypto.bip39.wordlists.English;
 
 public class GetSeeds {
 	
-
 	public static void main(String[] args) {
 
 		final long seed = generateSeed();
@@ -20,7 +19,7 @@ public class GetSeeds {
 		System.out.println("Calculando... \n");
 		
 		final StringBuilder sb = new StringBuilder();
-		byte[] entropy = new byte[Words.TWENTY_FOUR.byteLength()];
+		final byte[] entropy = new byte[Words.TWENTY_FOUR.byteLength()];
 		final SecureRandom sr = new SecureRandom();
 		sr.setSeed(seed);
 		sr.nextBytes(entropy);
@@ -58,8 +57,8 @@ public class GetSeeds {
 			}
 			
 			final Point newLocation = MouseInfo.getPointerInfo().getLocation();
-			double newMouseX = newLocation.getX();
-			double newMouseY = newLocation.getY();
+			final double newMouseX = newLocation.getX();
+			final double newMouseY = newLocation.getY();
 
 			if (newMouseX != mouseX || newMouseY != mouseY) {
 				mouseX = newMouseX;
