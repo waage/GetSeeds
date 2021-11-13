@@ -6,22 +6,24 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 
+import com.github.waage.getseeds.display.QRWindow;
+
 import io.github.novacrypto.bip39.MnemonicGenerator;
 import io.github.novacrypto.bip39.Words;
 import io.github.novacrypto.bip39.wordlists.English;
 
 public class GetSeeds {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		final long seed = generateSeed();
+		final long randomSeed = generateRandomSeed();
 		
 		System.out.println("Calculando... \n");
 		
 		final StringBuilder sb = new StringBuilder();
 		final byte[] entropy = new byte[Words.TWENTY_FOUR.byteLength()];
 		final SecureRandom sr = new SecureRandom();
-		sr.setSeed(seed);
+		sr.setSeed(randomSeed);
 		sr.nextBytes(entropy);
 		
 		new MnemonicGenerator(English.INSTANCE).createMnemonic(entropy, sb::append);
@@ -29,6 +31,8 @@ public class GetSeeds {
 		final String mnemonics = sb.toString();
 		System.out.println(mnemonics);
 		printTable(Arrays.asList(mnemonics.split(" ")));
+		
+		QRWindow.display(mnemonics);
 	}
 
 	private static void printTable(final List<String> mnemonics) {
@@ -38,7 +42,7 @@ public class GetSeeds {
 		}
 	}
 
-	private static long generateSeed() {
+	private static long generateRandomSeed() {
 
 		final Point location = MouseInfo.getPointerInfo().getLocation();
 		double mouseX = location.getX();
