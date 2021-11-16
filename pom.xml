@@ -14,12 +14,6 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>io.github.novacrypto</groupId>
-			<artifactId>BIP39</artifactId>
-			<version>0.1.9</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.google.zxing</groupId>
 			<artifactId>core</artifactId>
 			<version>3.4.1</version>
